@@ -1,5 +1,0 @@
-_assetic:
-    resource: .
-    type: assetic
-_app:
-    resource: /Users/timrodger/Code/services/cron/code/app/config/routing_dev.yml
