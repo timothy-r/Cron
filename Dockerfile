@@ -15,10 +15,15 @@ RUN apt-get update -qq && \
     php5-fpm \
     php5-curl
 
+# Setup nginx
+ADD build/default /etc/nginx/sites-available/default
+RUN echo "cgi.fix_pathinfo = 0;" >> /etc/php5/fpm/php.ini
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
 RUN curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer
 
-CMD ["php5-fpm && nginx"]
+CMD ["service php5-fpm start && nginx"]
 
 # Move application files into place
 COPY code/ /home/cron/
