@@ -1,0 +1,7 @@
+list:
+    path: /jobs
+    defaults: { _controller: AppBundle:Job:index }
+
+get:
+    path: /jobs/{id}
+    defaults: { _controller: AppBundle:Job:get }

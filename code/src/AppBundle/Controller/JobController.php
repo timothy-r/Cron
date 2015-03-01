@@ -10,4 +10,9 @@ class JobController extends Controller
     {
         return $this->render('default/jobs.html.twig');
     }
+
+    public function getAction($job_id)
+    {
+        return 'job ' . $job_id;
+    }
 }

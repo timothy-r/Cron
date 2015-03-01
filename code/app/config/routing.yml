@@ -1,6 +1,3 @@
-app:
-    path: /jobs
-    defaults: { _controller: AppBundle:Job:index }
-
-    path: /
-    defaults: { _controller: AppBundle:Default:index }
+jobs:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix: /
