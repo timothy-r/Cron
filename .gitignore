@@ -1,5 +1,6 @@
 vendor
 cache
 logs
+bin
 *.swp
 .idea
