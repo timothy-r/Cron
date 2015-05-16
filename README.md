@@ -1,4 +1,4 @@
 Cron
 ====
 
-A service to provide schduling
+A service to provide scheduling
